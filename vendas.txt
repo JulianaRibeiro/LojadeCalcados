@@ -1,1 +1,1 @@
-codigo,desc,nome,Dinheiro,qtd,valor;1,,sapatilha,Dinheiro,20,60;2,,sapatilha,Dinheiro,15,60;1,,sapatilha,Cartao,25,60;2,,sapatilha,Dinheiro,25,60;
+1,,sapatilha,Cartao,25,60;2,,sapatilha,Dinheiro,25,60;
