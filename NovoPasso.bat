@@ -1,0 +1,1 @@
+java -cp NovoPasso.jar Controller.Inicio
