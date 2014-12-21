@@ -22,7 +22,8 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 import Persistência.Cliente;
-
+import Persistência.Usuario;
+/** Classe que permite Consultar e Alterar os dados do Cliente*/
 public class ConsultaCliente extends JDialog implements MouseListener, ActionListener {
 
     private static final long serialVersionUID = 2227060387001221294L;
@@ -109,7 +110,7 @@ public class ConsultaCliente extends JDialog implements MouseListener, ActionLis
             tela.setVisible(true);
         }
     }
-
+/** Classe que coloca Clientes na JTable*/
     private void preencherGrid() {
 
         if (sp != null) {
@@ -190,6 +191,10 @@ public class ConsultaCliente extends JDialog implements MouseListener, ActionLis
 
         } else if (e.getSource().equals(buttonExcluir)) {
 
+            if (Usuario.getUsuarioLogado().getTipo().equalsIgnoreCase("f")){
+                JOptionPane.showMessageDialog(this,"Você não tem permissão de acesso");
+                return;
+            }
             Dados.removeCliente(clienteSelecionado);
             preencherGrid();
         }

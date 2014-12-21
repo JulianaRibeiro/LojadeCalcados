@@ -1,7 +1,7 @@
 package Persistência;
 
 import java.util.ArrayList;
-
+/** Classe que contém os atributos e métodos de Clientes no sistema*/
 public class Cliente {
 
     private static ArrayList<Cliente> lista = new ArrayList<Cliente>();

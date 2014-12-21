@@ -1,7 +1,7 @@
 package Persistência;
 
 import java.util.ArrayList;
-
+/** Classe que contém os métodos e atributos dos funcionarios do sistema.*/
 public class Funcionario {
 
     private static ArrayList<Funcionario> lista = new ArrayList<Funcionario>();

@@ -1,7 +1,7 @@
 package Persistência;
 
 import java.util.ArrayList;
-
+/** Classe que contém os métodos e atributos das vendas do sistema.*/
 public class Venda {
 
     public static ArrayList<Venda> lista = new ArrayList<Venda>();

@@ -22,7 +22,9 @@ import javax.swing.table.DefaultTableModel;
 
 import Persistência.Cliente;
 import Persistência.Funcionario;
+import Persistência.Usuario;
 
+/** Classe que permite Consultar e Alterar os dados do funcionario*/
 public class ConsultaFuncionario extends JDialog implements
         MouseListener, ActionListener {
 
@@ -147,6 +149,10 @@ public class ConsultaFuncionario extends JDialog implements
             }
 
         } else if (e.getSource().equals(buttonExcluir)) {
+             if (Usuario.getUsuarioLogado().getTipo().equalsIgnoreCase("f")){
+                JOptionPane.showMessageDialog(this,"Você não tem permissão de acesso");
+                return;
+            }
             Dados.removeFuncionario(funcionarioSelecionado);
             preencherGrid();
         }

@@ -15,6 +15,9 @@ import java.util.ArrayList;
 
 import jdk.nashorn.internal.runtime.ListAdapter;
 
+/**
+ * Classe que controla o acesso de leitura e escrita aos arquivos de dados do sistema
+ */
 public class Dados {
 
     private final static String caminhoArq_Usuario = "usuarios.txt";
@@ -24,6 +27,9 @@ public class Dados {
     private final static String caminhoArq_Venda = "vendas.txt";
     private final static String caminhoArq_Produto = "produtos.txt";
 
+    /**
+     * Método que le os dados dos clientes do arquivo para a memória
+     */
     public static void LerClientes() throws IOException {
 
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
@@ -73,6 +79,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que grava os dados dos clientes no arquivo de dados
+     */
     public static void GravarClientes() throws IOException {
 
         File f = new File(caminhoArq_Cliente);
@@ -90,6 +99,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que le os dados dos fornecedores do arquivo para a memória
+     */
     public static void LerFornecedores() throws IOException {
 
         ArrayList<Fornecedor> Fornecedores = new ArrayList<Fornecedor>();
@@ -134,6 +146,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que grava os dados dos fornecedores no arquivo de dados
+     */
     public static void GravarFornecedores() throws IOException {
 
         File f = new File(caminhoArq_Fornecedor);
@@ -149,6 +164,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que le os dados dos funcionarios do arquivo para a memória
+     */
     public static void LerFuncionarios() throws IOException {
 
         ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
@@ -199,6 +217,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que grava os dados dos funcionarios no arquivo de dados
+     */
     public static void GravarFuncionarios() throws IOException {
 
         File f = new File(caminhoArq_Funcionario);
@@ -215,6 +236,9 @@ public class Dados {
         fw.close();
     }
 
+    /**
+     * Método que le os dados das vendas do arquivo para a memória
+     */
     public static void LerVendas() throws IOException {
 
         ArrayList<Venda> Vendas = new ArrayList<Venda>();
@@ -255,6 +279,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que grava os dados das vendas no arquivo de dados
+     */
     public static void GravarVendas() throws IOException {
 
         File f = new File(caminhoArq_Venda);
@@ -269,6 +296,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que le os dados dos produtos do arquivo para a memória
+     */
     public static void LerProdutos() throws IOException {
 
         ArrayList<Produto> Produtos = new ArrayList<Produto>();
@@ -309,6 +339,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que grava os dados dos produtos no arquivo de dados
+     */
     public static void GravarProdutos() throws IOException {
 
         File f = new File(caminhoArq_Produto);
@@ -323,6 +356,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que le os dados dos Usuarios do arquivo para a memória
+     */
     public static void LerUsuarios() throws IOException {
 
         ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
@@ -360,6 +396,9 @@ public class Dados {
 
     }
 
+    /**
+     * Método que grava os dados dos usuarios no arquivo de dados
+     */
     public static void GravarUsuarios() throws IOException {
 
         File f = new File(caminhoArq_Usuario);
@@ -372,7 +411,11 @@ public class Dados {
         fw.close();
 
     }
-
+ /**
+     * Método que cadastra um cliente, inclusive no arquivo de dados
+     *
+     * @param c - cliente que será cadastrado
+     */
     public static void addCliente(Cliente c) {
 
         Cliente.getLista().add(c);
@@ -384,6 +427,11 @@ public class Dados {
         }
     }
 
+    /**
+     * Método que cadastra um funcionário, inclusive no arquivo de dados
+     *
+     * @param f - funcionario que será cadastrado
+     */
     public static void addFuncionario(Funcionario f) {
 
         Funcionario.getLista().add(f);
@@ -394,7 +442,11 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+ /**
+     * Método que cadastra um fornecedor, inclusive no arquivo de dados
+     *
+     * @param f - fornecedor que será cadastrado
+     */
     public static void addFornecedor(Fornecedor f) {
 
         Fornecedor.getLista().add(f);
@@ -405,7 +457,11 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+ /**
+     * Método que cadastra um produto, inclusive no arquivo de dados
+     *
+     * @param p - produto que será cadastrado
+     */
     public static void addProduto(Produto p) {
 
         Produto.getLista().add(p);
@@ -416,7 +472,11 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+ /**
+     * Método que cadastra um venda, inclusive no arquivo de dados
+     *
+     * @param v - venda que será cadastrada
+     */
     public static void addVenda(Venda v) {
 
         Venda.lista.add(v);
@@ -427,7 +487,11 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+ /**
+     * Método que cadastra um usuário, inclusive no arquivo de dados
+     *
+     * @param u - usuario que será cadastrado
+     */
     public static void addUsuario(Usuario u) {
 
         Usuario.getLista().add(u);
@@ -439,7 +503,11 @@ public class Dados {
         }
     }
 
-        //***********
+    //***********
+    /** Método que remove um cliente do arquivo de dados
+     * 
+     * @param c - cliente que será removido
+     */
     public static void removeCliente(Cliente c) {
 
         Cliente.getLista().remove(c);
@@ -450,7 +518,10 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+/** Método que remove um funcionario do arquivo de dados
+     * 
+     * @param f - funcionario que será removido
+     */
     public static void removeFuncionario(Funcionario f) {
 
         Funcionario.getLista().remove(f);
@@ -461,7 +532,10 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+/** Método que remove um fornecedor do arquivo de dados
+     * 
+     * @param f - fornecedor que será removido
+     */
     public static void removeFornecedor(Fornecedor f) {
 
         Fornecedor.getLista().remove(f);
@@ -472,7 +546,10 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+/** Método que remove um produto do arquivo de dados
+     * 
+     * @param p - produto que será removido
+     */
     public static void removeProduto(Produto p) {
 
         Produto.getLista().remove(p);
@@ -483,7 +560,10 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+/** Método que remove uma venda do arquivo de dados
+     * 
+     * @param v - venda que será removida
+     */
     public static void removeVenda(Venda v) {
 
         Venda.lista.remove(v);
@@ -494,7 +574,10 @@ public class Dados {
             e.printStackTrace();
         }
     }
-
+/** Método que remove um usuario do arquivo de dados
+     * 
+     * @param u - usuario que será removido
+     */
     public static void removeUsuario(Usuario u) {
 
         Usuario.getLista().remove(u);

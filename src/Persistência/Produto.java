@@ -2,6 +2,7 @@ package Persistência;
 
 import java.util.ArrayList;
 
+/** Classe que contém os métodos e atributos dos produtos do sistema.*/
 public class Produto {
 
     private static ArrayList<Produto> lista = new ArrayList<Produto>();

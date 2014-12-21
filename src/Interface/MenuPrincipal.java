@@ -10,6 +10,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+/** Classe que contém os Menus de Novo e Consulta, que permitem que o usuário já logado,insira um novo registro ou o consulte*/
 public class MenuPrincipal extends JFrame implements ActionListener {
 
     private static final long serialVersionUID = -8201084177335104544L;

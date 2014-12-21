@@ -5,7 +5,7 @@ import sun.rmi.runtime.Log;
 import Interface.MenuPrincipal;
 
 public class Inicio {
-
+/** Classe que contém os métodos a serem executados*/
     public static void main(String[] args) {
         try {
 

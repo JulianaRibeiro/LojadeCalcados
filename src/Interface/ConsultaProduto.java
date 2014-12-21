@@ -23,7 +23,9 @@ import javax.swing.table.DefaultTableModel;
 import Persistência.Cliente;
 import Persistência.Funcionario;
 import Persistência.Produto;
+import Persistência.Usuario;
 
+/** Classe que permite Consultar e Alterar os dados do produto*/
 public class ConsultaProduto extends JDialog implements MouseListener,
         ActionListener {
 
@@ -153,6 +155,10 @@ public class ConsultaProduto extends JDialog implements MouseListener,
             }
 
         } else if (e.getSource().equals(buttonExcluir)) {
+             if (Usuario.getUsuarioLogado().getTipo().equalsIgnoreCase("f")){
+                JOptionPane.showMessageDialog(this,"Você não tem permissão de acesso");
+                return;
+            }
 
             Dados.removeProduto(produtoSelecionado);
             preencherGrid();

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Juliana
- */
+ /** Classe que contém os métodos e atributos dos usuarios do sistema.*/
 public class Usuario {
 
     private static ArrayList<Usuario> lista = new ArrayList<Usuario>();

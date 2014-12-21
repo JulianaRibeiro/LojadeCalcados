@@ -1,7 +1,7 @@
 package Persistência;
 
 import java.util.ArrayList;
-
+/** Classe que contém os métodos e atributos dos fornecedores do sistema.*/
 public class Fornecedor {
 
     private static ArrayList<Fornecedor> lista = new ArrayList<Fornecedor>();

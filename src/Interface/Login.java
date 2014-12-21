@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author Juliana
- */
+ Classe que verifica o usuário e a senha e permite ou não o acesso ao sistema*/
 public class Login extends javax.swing.JFrame {
 
     /**

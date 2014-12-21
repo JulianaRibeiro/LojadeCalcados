@@ -22,8 +22,9 @@ import javax.swing.table.DefaultTableModel;
 
 import Persistência.Cliente;
 import Persistência.Produto;
+import Persistência.Usuario;
 import Persistência.Venda;
-
+/** Classe que permite Consultar e Alterar os dados da venda*/
 public class ConsultaVenda extends BaseFrame implements MouseListener, ActionListener {
 
     private JTable tc;
@@ -119,6 +120,10 @@ public class ConsultaVenda extends BaseFrame implements MouseListener, ActionLis
             }
 
         } else if (e.getSource().equals(buttonExcluir)) {
+             if (Usuario.getUsuarioLogado().getTipo().equalsIgnoreCase("f")){
+                JOptionPane.showMessageDialog(this,"Você não tem permissão de acesso");
+                return;
+            }
 
             Dados.removeVenda(vendaSelecionado);
             preencherGrid();
